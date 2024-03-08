@@ -1,9 +1,72 @@
 .vote {
   min-height: 100vh;
+  background-color: black;
   
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr 100px;
+  justify-content: center;
+  align-items: center;
+
+  header {
+    height: 100%;
+    background-color: black;
+  }
+
+  footer {
+    height: 100%;
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__logo {
+    height: 100px;
+    width: 100px;
+  }
 }
 
 .vote-card {
-  height: 50vh;
-  background-color: aqua;
+  height: 100%;
+  background-color: maroon;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.vote-confirmation {
+  min-height: 100vh;
+  width: 100%;
+  background-color: green;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2em;
+  font-weight: bold;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transition: transform 1s ease;
+  transform: translateY(100%);
+
+  p {
+    text-wrap: wrap;
+  }
+}
+
+.vote-confirmation.show {
+  transform: translateY(0);
 }
